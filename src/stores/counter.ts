@@ -2,9 +2,23 @@ import { ref } from 'vue'
 import { defineStore } from 'pinia'
 
 export const useCounterStore = defineStore('counter', () => {
-  const count = ref(10)
+  /* state */
+  const count = ref(0)
+
+  /* actions */
+  function increaseCount() {
+    count.value++
+  }
+  function decreaseCount() {
+    count.value--
+  }
 
   return {
-    count
+    // state
+    count,
+
+    // actions
+    increaseCount,
+    decreaseCount,
   }
 })
