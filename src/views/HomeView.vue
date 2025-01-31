@@ -1,6 +1,6 @@
 <template>
   <div class="">
-    <div class="text-6xl m-10">{{ storeCounter.count }}</div>
+    <CountDisplay />
     <div class="text-4xl flex justify-center space-x-4">
       <button @click="storeCounter.decreaseCount" class="bg-gray-50 rounded border border-gray-200 px-2.5 py-2">-</button>
       <button @click="storeCounter.increaseCount" class="bg-gray-50 rounded border border-gray-200 p-2">+</button>
@@ -19,6 +19,7 @@
 
 <script setup lang="ts">
 import { useCounterStore } from '@/stores/counter'
+import CountDisplay from '@/components/CountDisplay.vue'
 
 const storeCounter = useCounterStore()
 
