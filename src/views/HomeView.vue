@@ -9,6 +9,11 @@
     <div>
       The counter is: {{ storeCounter.oddOrEven }}
     </div>
+    <hr class="my-10 max-w-md mx-auto">
+    <h3 class="text-xl mb-2">
+      Edit counter:
+    </h3>
+    <input v-model="storeCounter.count" type="number" class="bg-gray-50 rounded border border-gray-200 p-2">
   </div>
 </template>
 
