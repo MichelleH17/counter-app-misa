@@ -7,21 +7,14 @@
     </div>
     <hr class="my-10 max-w-md mx-auto">
     <div>
-      The counter is: {{ oddOrEven }}
+      The counter is: {{ storeCounter.oddOrEven }}
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
 import { useCounterStore } from '@/stores/counter'
 
 const storeCounter = useCounterStore()
 
-const count = ref(0)
-
-const oddOrEven = computed(() => {
-  if (count.value % 2 === 0) return 'even'
-  return 'odd'
-})
 </script>
